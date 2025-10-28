@@ -3,7 +3,8 @@ package com.prestek.davivienda.controller;
 import java.util.List;
 import java.util.Map;
 
-import com.prestek.davivienda.request.CreateApplicationRequest;
+import com.prestek.FinancialEntityCore.dto.ApplicationDto;
+import com.prestek.FinancialEntityCore.request.CreateApplicationRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -16,8 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.prestek.davivienda.dto.ApplicationDto;
-import com.prestek.davivienda.model.Application.ApplicationStatus;
+import com.prestek.FinancialEntityCore.model.Application.*;
 import com.prestek.davivienda.service.ApplicationService;
 
 import io.swagger.v3.oas.annotations.Operation;

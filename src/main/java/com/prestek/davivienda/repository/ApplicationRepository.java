@@ -1,7 +1,8 @@
 package com.prestek.davivienda.repository;
 
-import com.prestek.davivienda.model.Application;
-import com.prestek.davivienda.model.Application.ApplicationStatus;
+import com.prestek.FinancialEntityCore.model.Application;
+import com.prestek.FinancialEntityCore.model.Application.*;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

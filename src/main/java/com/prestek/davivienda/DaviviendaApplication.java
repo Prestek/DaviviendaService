@@ -5,8 +5,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
+@EntityScan(basePackages = {
+		"com.prestek.FinancialEntityCore.model",   // entidades del core (Application, etc.)
+		"com.prestek.Davivienda.model"            // si tienes entidades locales
+})
 public class DaviviendaApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(DaviviendaApplication.class);

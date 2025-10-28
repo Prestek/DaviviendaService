@@ -1,5 +1,6 @@
 package com.prestek.davivienda.service;
 
+import com.prestek.FinancialEntityCore.service.AbstractWeightedQuoteService;
 import org.springframework.stereotype.Component;
 
 @Component

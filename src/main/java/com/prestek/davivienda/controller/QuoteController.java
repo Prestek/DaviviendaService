@@ -1,9 +1,10 @@
 package com.prestek.davivienda.controller;
 
 
-import com.prestek.davivienda.service.AbstractWeightedQuoteService;
-import com.prestek.davivienda.dto.QuoteDto;
-import com.prestek.davivienda.request.QuoteRequest;
+import com.prestek.FinancialEntityCore.dto.QuoteDto;
+import com.prestek.FinancialEntityCore.request.QuoteRequest;
+import com.prestek.FinancialEntityCore.service.AbstractWeightedQuoteService;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
