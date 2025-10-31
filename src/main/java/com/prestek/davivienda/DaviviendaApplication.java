@@ -17,7 +17,7 @@ public class DaviviendaApplication {
 	private static final Logger logger = LoggerFactory.getLogger(DaviviendaApplication.class);
 
 	public static void main(String[] args) {
-		// Load environment variables from .env file only if not already set
+		// Load environment variables from .env.example file only if not already set
 		try {
 			Dotenv dotenv = Dotenv.configure().ignoreIfMissing().load();
 			dotenv.entries().forEach(entry -> {
@@ -28,7 +28,7 @@ public class DaviviendaApplication {
 				System.setProperty(key, entry.getValue());
 			});
 		} catch (Exception e) {
-			// Continue without .env file
+			// Continue without .env.example file
 		}
 		SpringApplication.run(DaviviendaApplication.class, args);
 	}
