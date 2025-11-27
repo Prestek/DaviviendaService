@@ -129,20 +129,18 @@
 				</configuration>
 			</plugin>
 
-			<!-- JaCoCo Maven Plugin for Code Coverage -->
+			<!-- JaCoCo Maven Plugin para cobertura de código -->
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.12</version>
 				<executions>
-					<!-- Prepare agent for code coverage -->
 					<execution>
 						<id>prepare-agent</id>
 						<goals>
 							<goal>prepare-agent</goal>
 						</goals>
 					</execution>
-					<!-- Generate coverage report -->
 					<execution>
 						<id>report</id>
 						<phase>test</phase>
@@ -150,10 +148,8 @@
 							<goal>report</goal>
 						</goals>
 					</execution>
-					<!-- Check coverage thresholds -->
 					<execution>
-						<id>check</id>
-						<phase>test</phase>
+						<id>jacoco-check</id>
 						<goals>
 							<goal>check</goal>
 						</goals>
@@ -170,14 +166,32 @@
 									</limits>
 								</rule>
 							</rules>
-							<excludes>
-								<exclude>com/prestek/davivienda/DaviviendaApplication.class</exclude>
-								<exclude>com/prestek/davivienda/config/*</exclude>
-								<exclude>com/prestek/davivienda/controller/HealthController.class</exclude>
-							</excludes>
 						</configuration>
 					</execution>
 				</executions>
+				<configuration>
+					<excludes>
+						<!-- Excluir clase principal de la aplicación -->
+						<exclude>**/DaviviendaApplication.class</exclude>
+						<!-- Excluir paquete de configuración -->
+						<exclude>**/config/**</exclude>
+						<!-- Excluir HealthController -->
+						<exclude>**/controller/HealthController.class</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+
+			<!-- Surefire Plugin para ejecutar tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.2.5</version>
+				<configuration>
+					<includes>
+						<include>**/*Test.java</include>
+						<include>**/*Tests.java</include>
+					</includes>
+				</configuration>
 			</plugin>
 
 			<!-- Maven Surefire Plugin for running tests -->
