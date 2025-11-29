@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    uses: Prestek/central-pipelines/.github/workflows/deploy.yml@V0.0.2
+    uses: Prestek/central-pipelines/.github/workflows/deploy.yml@V0.0.3
     with:
       PROJECT_NAME: "DaviviendaService"       # Nombre de la carpeta/proyecto en la instancia EC2
       IMAGE_NAME: "davivienda-service"                  # Nombre de la imagen Docker
